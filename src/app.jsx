@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 const axios = require('axios');
-const util = require('util');
 
 class App extends Component {
   // initialize state
@@ -85,4 +84,3 @@ class App extends Component {
 }
 
 export default App;
-// { JSON.stringify(this.state.quote['MutualFunds'], null, 2) }
