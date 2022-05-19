@@ -70,7 +70,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sandiegocodeschool/react100-vstda.git"
+    "url": "git://"
   },
   "license": "MIT"
 }

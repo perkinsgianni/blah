@@ -68,7 +68,7 @@ class App extends Component {
               </button>
             </div>
           </div>
-            <div style={ { height: '40px', width: '200%', backgroundColor: 'black', opacity: '0.7', marginLeft: '-10%', marginTop: '38%', overflow: 'scroll' } }>
+            <div style={ { height: '40px', width: '200%', backgroundColor: 'black', opacity: '0.7', marginLeft: '-10%', marginTop: '38%' } }>
               <marquee
                 style={ { fontSize: '18px', marginTop: '9px', color: 'white' } }
                 behavior='scroll'
