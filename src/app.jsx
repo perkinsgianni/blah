@@ -8,7 +8,7 @@ class App extends Component {
 
     this.state = {
       symbol: '',
-      // news: [],
+      news: [],
       quote: []
     }
 
@@ -27,23 +27,23 @@ class App extends Component {
     this.retrieveQuote();
   }
 
-  // componentWillMount() {
-  //   // invoke axios object
-  //   axios
-  //   // http get request to external web service
-  //   .get('https://schwab.p.rapidapi.com/news/get-market-update', {
-  //     headers: {
-  //       'X-RapidAPI-Host': 'schwab.p.rapidapi.com',
-  //       'X-RapidAPI-Key': '1ad76b53a8mshba3141588e81ad8p1deba9jsn20cf00093aa5'
-  //     },
-  //   })
-  //   .then(res => {
-  //     // first callback takes http response and returns data property
-  //     const news = res.data;
-  //   // second callback uses this.setState function to merge provided object with current object assigned to this.state
-  //     this.setState({ news });
-  //   });
-  // }
+  componentWillMount() {
+    // invoke axios object
+    axios
+    // http get request to external web service
+    .get('https://schwab.p.rapidapi.com/news/get-market-update', {
+      headers: {
+        'X-RapidAPI-Host': 'schwab.p.rapidapi.com',
+        'X-RapidAPI-Key': '1ad76b53a8mshba3141588e81ad8p1deba9jsn20cf00093aa5'
+      },
+    })
+    .then(res => {
+      // first callback takes http response and returns data property
+      const news = res.data;
+    // second callback uses this.setState function to merge provided object with current object assigned to this.state
+      this.setState({ news });
+    });
+  }
 
   retrieveQuote() {
     // invoke axios object
@@ -89,7 +89,7 @@ class App extends Component {
             </div>
           </div>
           {/* first marquee: news */}
-          {/* <div style={ { height: '40px', width: '200%', backgroundColor: 'black', opacity: '0.7', marginLeft: '-10%', marginTop: '38%' } }>
+          <div style={ { height: '40px', width: '200%', backgroundColor: 'black', opacity: '0.7', marginLeft: '-10%', marginTop: '38%' } }>
             <marquee
               style={ { fontSize: '18px', marginTop: '9px', color: 'white' } }
               behavior='scroll'
@@ -97,9 +97,9 @@ class App extends Component {
             >
                 { JSON.stringify(this.state.news['Teaser'], null, 2) }
             </marquee>
-          </div> */}
+          </div>
           {/* second marquee: quote */}
-          <div style={ { height: '40px', width: '200%', backgroundColor: 'black', opacity: '0.7', marginLeft: '-10%', marginTop: '38%' } }>
+          <div style={ { height: '40px', width: '200%', backgroundColor: 'black', opacity: '0.7', marginLeft: '-10%', marginTop: '3%' } }>
             <marquee
               style={ { fontSize: '18px', marginTop: '9px', color: 'white' } }
               behavior='scroll'
@@ -128,6 +128,7 @@ class App extends Component {
               </marquee>
             )}
           </div> */}
+          
         </div>
       </div>
     );
