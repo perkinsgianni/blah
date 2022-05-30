@@ -1,6 +1,6 @@
 {
   "name": "hackathon-starter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Hackathon-Starter",
   "main": "server/index.js",
   "watch": {
