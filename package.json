@@ -1,6 +1,6 @@
 {
   "name": "hackathon-starter",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Hackathon-Starter",
   "main": "server/index.js",
   "watch": {
@@ -11,10 +11,7 @@
       "extensions": "js,jsx"
     }
   },
-  "homepage": "https://perkinsgianni.github.io/react100-hackathon",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "npm run less && webpack",
     "start": "node server/index.js",
     "less": "lessc src/css/style.less dist/css/style.css",
@@ -30,7 +27,6 @@
     "dotenv": "^16.0.1",
     "expect": "^1.20.2",
     "express": "^4.16.3",
-    "gh-pages": "^4.0.0",
     "json-loader": "^0.5.4",
     "lodash": "^4.17.10",
     "lodash-webpack-plugin": "^0.10.2",
